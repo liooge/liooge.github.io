@@ -32,10 +32,6 @@ google apple说来说去，静说这几个公司了。我主要说了borg等proj
     <header>
       <div>
 		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="Liooge&#39;s space" title="Liooge&#39;s space"/></a>
-			</div>
-			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Liooge&#39;s space">Liooge&#39;s space</a></h1>
 				<h2 class="blog-motto">Coder is running!</h2>
@@ -177,6 +173,11 @@ google apple说来说去，静说这几个公司了。我主要说了borg等proj
 	</div>
 	
 	
+	<section class="info">
+		<p> Hello, i&#39;m an 3d engineer in glu inc <br/>
+			Focus on Network, encryption &amp; architecture</p>
+	</section>
+	 
 	<div class="social-font clearfix">
 		
 		
@@ -302,6 +303,27 @@ $(document).ready(function(){
 
 
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
 
 
 
