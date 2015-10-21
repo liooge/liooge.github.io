@@ -9,10 +9,9 @@
     
     <meta name="author" content="liooge">
     
-    <meta name="description" content="#Basic Tips
-
+    <meta name="description" content="Basic Tips
 u3d Texture有以下集中用途： Texture纹理， normal map法线贴图, gui, cursor 图标文件, Reflection 反射,cookie用作光源, lightmap光照贴图,  advanced贴
-Wrap Mode Repeat,Clam">
+Wrap Mode Repeat,Clamp重">
     
     
     
@@ -72,7 +71,7 @@ Wrap Mode Repeat,Clam">
     </p>
   <p class="article-time">
     <time datetime="2015-10-21T10:05:35.000Z" itemprop="datePublished">2015-10-21</time>
-    更新日期:<time datetime="2015-10-21T10:06:23.602Z" itemprop="dateModified">2015-10-21</time>
+    更新日期:<time datetime="2015-10-21T10:17:25.670Z" itemprop="dateModified">2015-10-21</time>
     
   </p>
 </header>
@@ -81,18 +80,16 @@ Wrap Mode Repeat,Clam">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#I/O_和_控制"><span class="toc-number">1.</span> <span class="toc-text">I/O 和 控制</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic_Tips"><span class="toc-number">1.</span> <span class="toc-text">Basic Tips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#游戏场景"><span class="toc-number">2.</span> <span class="toc-text">游戏场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件介绍"><span class="toc-number">3.</span> <span class="toc-text">组件介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作"><span class="toc-number">4.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Script脚本"><span class="toc-number">5.</span> <span class="toc-text">Script脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建光源"><span class="toc-number">6.</span> <span class="toc-text">创建光源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shuriken粒子系统"><span class="toc-number">7.</span> <span class="toc-text">Shuriken粒子系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mecanim_动画系统"><span class="toc-number">8.</span> <span class="toc-text">Mecanim 动画系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#物理引擎"><span class="toc-number">9.</span> <span class="toc-text">物理引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo"><span class="toc-number">10.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#光照贴图技术"><span class="toc-number">11.</span> <span class="toc-text">光照贴图技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NavMesh_导航网格"><span class="toc-number">12.</span> <span class="toc-text">NavMesh 导航网格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遮挡剔除技术"><span class="toc-number">13.</span> <span class="toc-text">遮挡剔除技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后期屏幕渲染特效"><span class="toc-number">14.</span> <span class="toc-text">后期屏幕渲染特效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发篇"><span class="toc-number">15.</span> <span class="toc-text">开发篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础知识"><span class="toc-number">16.</span> <span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unity_Script"><span class="toc-number">17.</span> <span class="toc-text">Unity Script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I/O_和_控制"><span class="toc-number">18.</span> <span class="toc-text">I/O 和 控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shader_\&_ShaderLab"><span class="toc-number">19.</span> <span class="toc-text">Shader \& ShaderLab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced_Develop"><span class="toc-number">20.</span> <span class="toc-text">Advanced Develop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作流程"><span class="toc-number">21.</span> <span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Script_Debug"><span class="toc-number">22.</span> <span class="toc-text">Script Debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo_详解"><span class="toc-number">23.</span> <span class="toc-text">Demo 详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二次阅读"><span class="toc-number">24.</span> <span class="toc-text">第二次阅读</span></a></li></ol>
 		</div>
 		
-		<p>#Basic Tips</p>
-<ol>
+		<h3 id="Basic_Tips">Basic Tips</h3><ol>
 <li>u3d Texture<br>有以下集中用途： Texture纹理， normal map法线贴图, gui, cursor 图标文件, Reflection 反射,<br>cookie用作光源, lightmap光照贴图,  advanced贴</li>
 <li>Wrap Mode Repeat,<br>Clamp重复，截断</li>
 <li>Filter Mode 过滤模式<br>Point, Bilinear双线性(找出最接近的四个图素，做插值), Trilinear</li>
 <li>Prefab 预设体<br>gameobject 和 component 的集合，为了重复利用。</li>
 </ol>
-<p>#游戏场景</p>
-<ol>
+<h3 id="游戏场景">游戏场景</h3><ol>
 <li>Create Scene<br>创建Plane平面， Gameobject创建的时候以当前的scene的中心点位置。<blockquote>
 <p>Basic Sphere</p>
 <pre><code>cube, <span class="keyword">sphere</span>, capsule, <span class="keyword">cylinder</span>, <span class="keyword">plane</span>
@@ -102,8 +99,7 @@ Wrap Mode Repeat,Clam">
 <li>所有的gameobject， 不过是在empty object上挂载了各种类别的组件。</li>
 <li>GameObject必须有一个transform component，位置，旋转，缩放</li>
 </ol>
-<p>#组件介绍</p>
-<ol>
+<h3 id="组件介绍">组件介绍</h3><ol>
 <li><p>Mesh<br>网格<br><strong>Mesh Filter</strong>: 获取mesh, 并传递到所属的对象gameobject上，如果网格拥有蒙皮信息，将创建skinned mesh renderer.还要为gameobject添加一个mesh render，才能让对象在scene中渲染出来。让对象在scene中渲染出来。<br><strong>Text Mesh</strong>: 文字渲染器， 生成3d文字。<br><strong>Mesh Renderer</strong>: 从filter获取网格模型，根据transform组件在scene中渲染。</p>
 </li>
 <li><p>Effect<br>特效，效果<br><strong>Particle System</strong>: 粒子，烟雾，气流，火焰，瀑布<br><strong>Tail Renderer</strong>: 轨迹/拖尾 Gameobject 在scene中产生拖影效果<br><strong>Line Renderer</strong>: 3d空间中2-N个点之间的连线，支持自定义宽度和材质贴图，需要多个Gameobject添加LineRenderer.<br><strong>Lens Flare</strong>: 镜头光晕，强烈光源的折射效果。<br><strong>Halo</strong>: 光环，光晕，光源对象或自发光物体光晕和空气中细小灰尘<br><strong>Projector</strong>: 幻灯片，将材质纹理投射到Scene中所有与视锥相交的gameobject上。必须projector类型的Shader配置才能工作。<br><strong>Legacy Particles</strong>: </p>
@@ -119,13 +115,12 @@ Wrap Mode Repeat,Clam">
 <li><p>Miscellaneous:<br>综合<br><strong>Animator</strong>: 生成器<br><strong>Animation</strong>: 动画<br><strong>Network View</strong>: 网络视图 网络<strong>通信组件？？？</strong> 状态同步 和 RPC(<code>remote procedure call &lt;html/&gt;</code>)<br><strong>Wind Zone</strong>: 风域 用来模拟游戏对象受风力影响产生效果</p>
 </li>
 </ol>
-<p>#操作</p>
-<ol>
+<h3 id="操作">操作</h3><ol>
 <li>scene 中添加gameobject<pre><code>`<span class="built_in">create</span> object -&gt; <span class="built_in">add</span> mesh <span class="built_in">filter</span> -&gt; <span class="built_in">add</span> mesh render(<span class="built_in">add</span> material <span class="keyword">for</span> render)`
 </code></pre></li>
 </ol>
 <hr>
-<p>#Script脚本<br><code>javascript C sharp Boo</code></p>
+<h3 id="Script脚本">Script脚本</h3><p><code>javascript C sharp Boo</code></p>
 <ol>
 <li>Scripts.unity<br>包含一些默认的脚本<br><strong>General</strong>:  <pre><code><span class="strong">__Activate Trigger__</span>: 激活触发器 激活场景中的触发器对象
 <span class="strong">__Drag Rigidbody__</span>: 拖动刚体 
@@ -137,8 +132,7 @@ Wrap Mode Repeat,Clam">
 </code></pre></li>
 </ol>
 <hr>
-<p>#创建光源</p>
-<ol>
+<h3 id="创建光源">创建光源</h3><ol>
 <li><p>light 的类型<br><strong>directional</strong>:放到无限远<br><strong>point</strong>: range 类似于灯泡<br><strong>Spot</strong>:  锥形区域，耗费gpu资源<br><strong>Area Light</strong>: 光照贴图烘培</p>
 </li>
 <li><p><strong>Rendering paths : vertex lit顶点光照 , forward正向渲染, deferred lighting延时光照</strong><br>主要是阴影的效果</p>
@@ -190,10 +184,8 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#Shuriken粒子系统</p>
-<hr>
-<p>#Mecanim 动画系统</p>
-<blockquote>
+<h3 id="Shuriken粒子系统">Shuriken粒子系统</h3><hr>
+<h3 id="Mecanim_动画系统">Mecanim 动画系统</h3><blockquote>
 <p>丰富且复杂的动画系统</p>
 <ul>
 <li>人体角色工作流和动画创建能力 </li>
@@ -229,8 +221,7 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#物理引擎</p>
-<ol>
+<h3 id="物理引擎">物理引擎</h3><ol>
 <li><p>RigidBody 刚体 接受外力、扭矩力</p>
 <blockquote>
 <p>transform组件 不会受到外力<br>RigidBody与游戏对象的关系</p>
@@ -273,13 +264,11 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#Demo </p>
-<blockquote>
+<h3 id="Demo">Demo</h3><blockquote>
 <p> Scene End ball game 物理引擎练习。</p>
 </blockquote>
 <hr>
-<p>#光照贴图技术              </p>
-<ol>
+<h3 id="光照贴图技术">光照贴图技术</h3><ol>
 <li>Lightmapping<blockquote>
 <p>增强静态场景光照效果， 不能作用到动态游戏对象</p>
 <ul>
@@ -295,8 +284,7 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#NavMesh 导航网格</p>
-<blockquote>
+<h3 id="NavMesh_导航网格">NavMesh 导航网格</h3><blockquote>
 <p>3d游戏World中 动态物体自动寻路的一种技术</p>
 <ul>
 <li>Navigation Static 参与导航网格烘培</li>
@@ -306,21 +294,17 @@ Wrap Mode Repeat,Clam">
 <li>Navmesh Obstacle组件 路障、<br>yield return 代替Timer 使用</li>
 </ul>
 </blockquote>
-<p>#遮挡剔除技术</p>
-<blockquote>
+<h3 id="遮挡剔除技术">遮挡剔除技术</h3><blockquote>
 <p>Occlusion Culling 提高渲染性能</p>
 </blockquote>
-<p>#后期屏幕渲染特效</p>
-<blockquote>
+<h3 id="后期屏幕渲染特效">后期屏幕渲染特效</h3><blockquote>
 <p>ImageEffects 应用在Camera上</p>
 <ul>
 <li>特效编写在OnRenderImage()函数</li>
 </ul>
 </blockquote>
 <hr>
-<p>#开发篇</p>
-<p>#基础知识</p>
-<ol>
+<h3 id="开发篇">开发篇</h3><h3 id="基础知识">基础知识</h3><ol>
 <li><p><strong>向量</strong></p>
 <blockquote>
 <p><strong>Basic Concepts</strong></p>
@@ -390,8 +374,7 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#Unity Script</p>
-<ol>
+<h3 id="Unity_Script">Unity Script</h3><ol>
 <li><p>C Sharp</p>
 <ul>
 <li>只支持内建数组 new int[5]</li>
@@ -469,7 +452,7 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<h1 id="I/O_和_控制">I/O 和 控制</h1><ol>
+<h3 id="I/O_和_控制">I/O 和 控制</h3><ol>
 <li><p>Input</p>
 <blockquote>
 <p>鼠标、键盘、摇杆/方向盘/手柄</p>
@@ -509,8 +492,7 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#Shader \&amp; ShaderLab     </p>
-<ol>
+<h3 id="Shader_\&amp;_ShaderLab">Shader \&amp; ShaderLab</h3><ol>
 <li><p>Shader开发</p>
 <blockquote>
 <p>渲染管线中的特定处理阶段提供算法的一段代码<br>  实时渲染， 镜头景深、动态模糊、卡通渲染<br>  shader, shaderLab, 表面着色器(Surface Shader)</p>
@@ -554,15 +536,13 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#Advanced Develop </p>
-<ol>
+<h3 id="Advanced_Develop">Advanced Develop</h3><ol>
 <li><p>Batching<br>渲染过程：camera可视范围-&gt;任务模型(法线、本地位置、UV), 索引(各顶点形成的3角形)，变换(位置、缩放、旋转、摄像机位置)、</p>
 </li>
 <li><p>编辑器扩展<br>Editor Class for extend dev。<br>+继承EditorWindow @MenuItem<br>+自定义Inspector<br>+自定义Scene onSceneGUI()</p>
 </li>
 </ol>
-<p>#工作流程</p>
-<ol>
+<h3 id="工作流程">工作流程</h3><ol>
 <li>AssetBundle 是Unity包含一切的格式<blockquote>
 <p>自定义二进制文件ext 改为.bytes<br>AssetBundle API </p>
 <ul>
@@ -599,16 +579,14 @@ Wrap Mode Repeat,Clam">
 <li><p>Instantiate 的GameObject使用 Destroy() DestroyImmediate() </p>
 </li>
 </ol>
-<p>#Script Debug</p>
-<ol>
+<h3 id="Script_Debug">Script Debug</h3><ol>
 <li>Profiler 优化与调试<ul>
 <li>FixedUpdate中不要包含无需重复调用的代码</li>
 <li>Update 中最好不要执行find findObjectOfType findGameObjectWithTag, find操作最好在awake或 start中执行</li>
 </ul>
 </li>
 </ol>
-<p>#Demo 详解</p>
-<ol>
+<h3 id="Demo_详解">Demo 详解</h3><ol>
 <li>Angry Bots<blockquote>
 <ul>
 <li>FBX(静态资源、动态资源)的导入 Model Label 可以设置FBX文件的Mesh, Material, UV, Normal 切线 Rig 设置Animation Type<ul>
@@ -620,8 +598,7 @@ Wrap Mode Repeat,Clam">
 </li>
 </ol>
 <hr>
-<p>#第二次阅读</p>
-<ol>
+<h3 id="第二次阅读">第二次阅读</h3><ol>
 <li><p>概述&amp;Concept</p>
 <ul>
 <li>LOD Levels of Details  多层次细节</li>
@@ -676,7 +653,7 @@ Wrap Mode Repeat,Clam">
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#I/O_和_控制"><span class="toc-number">1.</span> <span class="toc-text">I/O 和 控制</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic_Tips"><span class="toc-number">1.</span> <span class="toc-text">Basic Tips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#游戏场景"><span class="toc-number">2.</span> <span class="toc-text">游戏场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件介绍"><span class="toc-number">3.</span> <span class="toc-text">组件介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作"><span class="toc-number">4.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Script脚本"><span class="toc-number">5.</span> <span class="toc-text">Script脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建光源"><span class="toc-number">6.</span> <span class="toc-text">创建光源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shuriken粒子系统"><span class="toc-number">7.</span> <span class="toc-text">Shuriken粒子系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mecanim_动画系统"><span class="toc-number">8.</span> <span class="toc-text">Mecanim 动画系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#物理引擎"><span class="toc-number">9.</span> <span class="toc-text">物理引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo"><span class="toc-number">10.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#光照贴图技术"><span class="toc-number">11.</span> <span class="toc-text">光照贴图技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NavMesh_导航网格"><span class="toc-number">12.</span> <span class="toc-text">NavMesh 导航网格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遮挡剔除技术"><span class="toc-number">13.</span> <span class="toc-text">遮挡剔除技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后期屏幕渲染特效"><span class="toc-number">14.</span> <span class="toc-text">后期屏幕渲染特效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发篇"><span class="toc-number">15.</span> <span class="toc-text">开发篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础知识"><span class="toc-number">16.</span> <span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unity_Script"><span class="toc-number">17.</span> <span class="toc-text">Unity Script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I/O_和_控制"><span class="toc-number">18.</span> <span class="toc-text">I/O 和 控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shader_\&_ShaderLab"><span class="toc-number">19.</span> <span class="toc-text">Shader \& ShaderLab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced_Develop"><span class="toc-number">20.</span> <span class="toc-text">Advanced Develop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作流程"><span class="toc-number">21.</span> <span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Script_Debug"><span class="toc-number">22.</span> <span class="toc-text">Script Debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo_详解"><span class="toc-number">23.</span> <span class="toc-text">Demo 详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二次阅读"><span class="toc-number">24.</span> <span class="toc-text">第二次阅读</span></a></li></ol>
   </div>
 
 <div id="asidepart">
