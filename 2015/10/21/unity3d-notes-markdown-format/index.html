@@ -1,0 +1,1125 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="Basic Tips u3d Texture有以下集中用途： Texture纹理， normal map法线贴图, gui, cursor 图标文件, Reflection 反射,cookie用作光源, lightmap光照贴图,  advanced贴 Wrap Mode Repeat,Clamp重复，截断 Filter Mode 过滤模式Point, Bilinear双线性(找出最接近的四个图素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="之前学习unity3d做的笔记，用的markdown语法，测试一下试试">
+<meta property="og:url" content="http://www.emps.win/2015/10/21/unity3d-notes-markdown-format/index.html">
+<meta property="og:site_name" content="The Sea of Stars">
+<meta property="og:description" content="Basic Tips u3d Texture有以下集中用途： Texture纹理， normal map法线贴图, gui, cursor 图标文件, Reflection 反射,cookie用作光源, lightmap光照贴图,  advanced贴 Wrap Mode Repeat,Clamp重复，截断 Filter Mode 过滤模式Point, Bilinear双线性(找出最接近的四个图素">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2023-02-10T06:34:19.835Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="之前学习unity3d做的笔记，用的markdown语法，测试一下试试">
+<meta name="twitter:description" content="Basic Tips u3d Texture有以下集中用途： Texture纹理， normal map法线贴图, gui, cursor 图标文件, Reflection 反射,cookie用作光源, lightmap光照贴图,  advanced贴 Wrap Mode Repeat,Clamp重复，截断 Filter Mode 过滤模式Point, Bilinear双线性(找出最接近的四个图素">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 之前学习unity3d做的笔记，用的markdown语法，测试一下试试 | The Sea of Stars </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">The Sea of Stars</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Coder is running!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                之前学习unity3d做的笔记，用的markdown语法，测试一下试试
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-10-21T18:05:35+00:00" content="2015-10-21">
+              2015-10-21
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/10/21/unity3d-notes-markdown-format/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/21/unity3d-notes-markdown-format/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Basic-Tips"><a href="#Basic-Tips" class="headerlink" title="Basic Tips"></a>Basic Tips</h3><ol>
+<li>u3d Texture<br>有以下集中用途： Texture纹理， normal map法线贴图, gui, cursor 图标文件, Reflection 反射,<br>cookie用作光源, lightmap光照贴图,  advanced贴</li>
+<li>Wrap Mode Repeat,<br>Clamp重复，截断</li>
+<li>Filter Mode 过滤模式<br>Point, Bilinear双线性(找出最接近的四个图素，做插值), Trilinear</li>
+<li>Prefab 预设体<br>gameobject 和 component 的集合，为了重复利用。</li>
+</ol>
+<h3 id="游戏场景"><a href="#游戏场景" class="headerlink" title="游戏场景"></a>游戏场景</h3><ol>
+<li>Create Scene<br>创建Plane平面， Gameobject创建的时候以当前的scene的中心点位置。<blockquote>
+<p>Basic Sphere</p>
+<pre><code>cube, sphere, capsule, cylinder, plane
+</code></pre></blockquote>
+</li>
+<li>GameObject除了empty object， 还包括几何体，导入模型，camera, gui, particle, light, 树木等各类元素<br>Hierarchy的元素都是gameobject.</li>
+<li>所有的gameobject， 不过是在empty object上挂载了各种类别的组件。</li>
+<li>GameObject必须有一个transform component，位置，旋转，缩放</li>
+</ol>
+<h3 id="组件介绍"><a href="#组件介绍" class="headerlink" title="组件介绍"></a>组件介绍</h3><ol start="11">
+<li><p>Mesh<br>网格<br><strong>Mesh Filter</strong>: 获取mesh, 并传递到所属的对象gameobject上，如果网格拥有蒙皮信息，将创建skinned mesh renderer.还要为gameobject添加一个mesh render，才能让对象在scene中渲染出来。让对象在scene中渲染出来。<br><strong>Text Mesh</strong>: 文字渲染器， 生成3d文字。<br><strong>Mesh Renderer</strong>: 从filter获取网格模型，根据transform组件在scene中渲染。</p>
+</li>
+<li><p>Effect<br>特效，效果<br><strong>Particle System</strong>: 粒子，烟雾，气流，火焰，瀑布<br><strong>Tail Renderer</strong>: 轨迹/拖尾 Gameobject 在scene中产生拖影效果<br><strong>Line Renderer</strong>: 3d空间中2-N个点之间的连线，支持自定义宽度和材质贴图，需要多个Gameobject添加LineRenderer.<br><strong>Lens Flare</strong>: 镜头光晕，强烈光源的折射效果。<br><strong>Halo</strong>: 光环，光晕，光源对象或自发光物体光晕和空气中细小灰尘<br><strong>Projector</strong>: 幻灯片，将材质纹理投射到Scene中所有与视锥相交的gameobject上。必须projector类型的Shader配置才能工作。<br><strong>Legacy Particles</strong>: </p>
+</li>
+<li><p>Physics<br>物理组件： 各种物理效果 Nvidia Physx物理引擎</p>
+</li>
+<li><p>Navigation<br>寻路导航<br><strong>NavMesh Agent</strong>: 寻路，存放导航网络代理导航信息<br><strong>Off-Mesh Links</strong>: 导航网格代理 将分离的网格连接起来<br><strong>Navmesh Obstacle</strong>: 导航网格障碍物，通过将固定位置的障碍物来烘培进行计算。</p>
+</li>
+<li><p>Audio：<br><strong>Audio Listener</strong>: 侦听器<br><strong>Audio Source</strong>: 音源<br><strong>Audio Reverb Zones</strong>: 混响区<br><strong>Audio Low Pass Filter</strong>: 低通滤波器<br><strong>Audio High Pass Filter</strong>: 高通滤波器<br><strong>Audio Echo Filter</strong>: 回响过滤器<br><strong>Audio Distortion Filter</strong>: 失真滤波器<br><strong>Audio Reverb Filter</strong>:<br><strong><strong>XXXXX</strong></strong></p>
+</li>
+<li><p>Rendering:<br>渲染<br><strong>Camera</strong>: 摄像机 数量不受限制<br><strong>Skybox</strong>: 天空盒 包围Scene的巨大立方体<br><strong>Flare Layer</strong>: 耀斑/光晕层 camera默认带有<br><strong>GUI Layer</strong>: ui 在游戏运行状态下才能被渲染出来,摄像机默认带有的组件<br><strong>Light</strong>: 灯光，各种光，平行，点，方向光<br><strong>Light Probe Group</strong>: 动态光探头/灯光探测器 添加一个或多个探测器，为移动物体实事计算光照贴图<br><strong>Occlusion Area</strong>: 遮挡区域 运动的游戏对象身上，遮挡剔除功能<br><strong>LODGroup</strong>: LOD Group 细节级别，<br><strong>GUI Texture</strong>: gui 使用的图片<br><strong>GUI Text</strong>: 文本</p>
+</li>
+<li><p>Miscellaneous:<br>综合<br><strong>Animator</strong>: 生成器<br><strong>Animation</strong>: 动画<br><strong>Network View</strong>: 网络视图 网络<strong>通信组件？？？</strong> 状态同步 和 RPC(<code>remote procedure call &lt;html/&gt;</code>)<br><strong>Wind Zone</strong>: 风域 用来模拟游戏对象受风力影响产生效果</p>
+</li>
+</ol>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ol start="11">
+<li>scene 中添加gameobject<pre><code>`create object -&gt; add mesh filter -&gt; add mesh render(add material for render)`
+</code></pre></li>
+</ol>
+<hr>
+<h3 id="Script脚本"><a href="#Script脚本" class="headerlink" title="Script脚本"></a>Script脚本</h3><p><code>javascript C sharp Boo</code></p>
+<ol start="11">
+<li>Scripts.unity<br>包含一些默认的脚本<br><strong>General</strong>:  <pre><code>__Activate Trigger__: 激活触发器 激活场景中的触发器对象
+__Drag Rigidbody__: 拖动刚体 
+</code></pre><strong>Camera Control</strong>:<pre><code>__Mouse Orbit__: 鼠标轨迹 camera 根据鼠标的偏移值旋转
+__SmoothFollow__: 平滑跟随 camera 跟随父对象进行移动、旋转，跟随的延迟和阻尼系数
+__SmoothLookAt__: 平滑注视 camera 永远对准约束的游戏对象
+</code></pre><strong>Unity Script</strong>:<pre><code>__CombineChildren__: 结合子对象 将相同材质的对象们结合起来，达到优化的目的
+__MeshCombineUtility__: 网格合并工具 
+</code></pre></li>
+</ol>
+<hr>
+<h3 id="创建光源"><a href="#创建光源" class="headerlink" title="创建光源"></a>创建光源</h3><ol start="11">
+<li><p>light 的类型<br><strong>directional</strong>:放到无限远<br><strong>point</strong>: range 类似于灯泡<br><strong>Spot</strong>:  锥形区域，耗费gpu资源<br><strong>Area Light</strong>: 光照贴图烘培</p>
+</li>
+<li><p><strong>Rendering paths : vertex lit顶点光照 , forward正向渲染, deferred lighting延时光照</strong><br>主要是阴影的效果</p>
+</li>
+<li><p>创建光源调节颜色可以制造处午后的光照效果</p>
+</li>
+<li><p>创建Camera</p>
+<blockquote>
+<p>. <strong>Perspective</strong>：透视<br>. <strong>Orthographic</strong>: 正交<br>. <strong>Camera Component</strong>:<br>   clear flag : skybox SolidColor DepthOnly Don’tClear<br>   <strong>CullingMask</strong>: 剔除遮罩 根据游戏对象指定的层控制摄像机渲染的游戏对象。<br>   <strong>Projection</strong>: <strong>Perspective</strong>:透视，透视方式渲染对象  <strong>Orthographic</strong>:正交<br>   <strong>Depth</strong>: 深度，控制摄像机渲染顺序，较大值在之上渲染<br>   <strong>ClippingPlanes</strong>: 剪裁平面 开始渲染与停止渲染之间的距离<strong>near</strong> <strong>far</strong><br>   <strong>RenderingPath</strong>: 渲染路径</p>
+</blockquote>
+</li>
+<li><p>Terrian Editor 地形编辑器</p>
+<blockquote>
+<p>unity 底边lod 功能，会根据地形距离及起伏程度调整pathc网络的疏密程度。<br><strong><strong>TODO</strong></strong>: </p>
+</blockquote>
+</li>
+<li><p>CharacterController </p>
+<blockquote>
+<ol start="11">
+<li>First Person Controller </li>
+<li>3rd Person Controller</li>
+</ol>
+</blockquote>
+</li>
+<li><p>粒子系统</p>
+<blockquote>
+<p>粒子发射器、粒子动画器、粒子渲染器， 可以通过脚本控制每个单独的例子<br><strong>Send Collision Message</strong> 模拟子弹和冲击伤害</p>
+</blockquote>
+</li>
+<li><p>Skybox 天空盒    </p>
+<blockquote>
+<p>使用了特殊类型shader的材质， 根据指定的纹理模拟远景、天空效果</p>
+<ul>
+<li>DawnDusk </li>
+<li>Eerie</li>
+<li>MoonShine</li>
+<li>自定义天空盒</li>
+</ul>
+</blockquote>
+</li>
+<li><p>Fog雾效</p>
+<blockquote>
+<p>远看有，近看没有</p>
+</blockquote>
+</li>
+<li><p>Water效果</p>
+</li>
+<li><p>Sound效果</p>
+</li>
+</ol>
+<hr>
+<h3 id="Shuriken粒子系统"><a href="#Shuriken粒子系统" class="headerlink" title="Shuriken粒子系统"></a>Shuriken粒子系统</h3><hr>
+<h3 id="Mecanim-动画系统"><a href="#Mecanim-动画系统" class="headerlink" title="Mecanim 动画系统"></a>Mecanim 动画系统</h3><blockquote>
+<p>丰富且复杂的动画系统</p>
+<ul>
+<li>人体角色工作流和动画创建能力 </li>
+<li>Retargeting运动重定向 把动画从一个角色模型应用到另一个角色模型</li>
+<li>Animation Clips 动画预览能力</li>
+<li>动画间复杂交互作用的可视化</li>
+</ul>
+</blockquote>
+<ol start="11">
+<li><p>Mecanim 工作流</p>
+<ul>
+<li>资源准备与导入</li>
+<li>角色的建立 (人体模型的avatar创建、肌肉定义muscle definitions)</li>
+<li>角色的运动 (动画片段及相互间的交互作用，状态机、混合树、动画参数、代码控制动画)</li>
+</ul>
+</li>
+<li><p>游戏中使用角色动画</p>
+<ul>
+<li>动画循环片段    是否适配</li>
+<li>Animator组件    拥有Avatar的GameObject 都有一个Animator组件， <blockquote>
+<p>Animator Controller角色设置行为，包含状态机(statemachines)、BlendTrees、脚本控制的Events</p>
+<ul>
+<li>Controller</li>
+<li>Avatar </li>
+<li>Apply Root Motion 控制角色的位置</li>
+<li>Animate Physics 动画物理交互</li>
+<li>Culling Mode  动画剪裁模式</li>
+<li>总是启用动画<br>混合树Blend Tree<br>区别于 动画过渡</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="物理引擎"><a href="#物理引擎" class="headerlink" title="物理引擎"></a>物理引擎</h3><ol start="11">
+<li><p>RigidBody 刚体 接受外力、扭矩力</p>
+<blockquote>
+<p>transform组件 不会受到外力<br>RigidBody与游戏对象的关系</p>
+<ul>
+<li>Parenting 半独立方式随parent 移动</li>
+<li>Scriping  在游戏对象刚体上添加AddForce()和AddTorque()添加作用力和扭矩力</li>
+<li>Animation 在动画和物理系统间切换对象的控制权，被标记为动力学模式，直接操作Transform，刚体会影响其他对象，但自身不会受到影响。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>Colliders 碰撞体    </p>
+<blockquote>
+<p>没有碰撞体的刚体 在模拟中会彼此穿过<br>physic material 不同的物理材质类型决定了碰撞体与其他对象的交互形式</p>
+<ul>
+<li>Box Collider</li>
+<li>Sphere Collider</li>
+<li>Capsule Collider</li>
+<li>Mesh Collider 网格，获取网格对象， 开始convex参数才能是mesh 碰撞体之间碰撞， 耗资源。网格碰撞体3角行数量少于255省。</li>
+<li>Wheel Collider </li>
+</ul>
+</blockquote>
+</li>
+<li><p>碰撞</p>
+<blockquote>
+</blockquote>
+<ul>
+<li>碰撞体和刚体 共同作用 产生了物理效果 碰撞的时候会有3个消息 发送给绑定的对象</li>
+<li>触发器 是碰撞体失效，发生碰撞时发送3个触发消息 切换场景、自动门等</li>
+<li>摩擦力和弹力 物理材质决定</li>
+<li>关节<ul>
+<li>HingeJoint,  </li>
+<li>FixedJoint固定关节（约束一个游戏对象对另一个的运动）</li>
+<li>SpringJoint弹簧关节 </li>
+<li>CharacterJoint角色关节 表现布娃娃 系统</li>
+<li>ConfigurableJoint可配置关节</li>
+</ul>
+</li>
+<li>力场<blockquote>
+<p>类似于火箭 起初没速度、不断加速</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><blockquote>
+<p> Scene End ball game 物理引擎练习。</p>
+</blockquote>
+<hr>
+<h3 id="光照贴图技术"><a href="#光照贴图技术" class="headerlink" title="光照贴图技术"></a>光照贴图技术</h3><ol start="11">
+<li>Lightmapping<blockquote>
+<p>增强静态场景光照效果， 不能作用到动态游戏对象</p>
+<ul>
+<li>Single Lightmapping 静态、仅生成一张Far光照图(保存了非实时光源)、</li>
+<li>Dual Lightmaps 区分实时、非实时区域，bake near,far 两种贴图， 近的实时渲染、远的使用贴图，临界区会平滑的插值过渡。</li>
+<li>Directional Lightmap 静态物体使用， 光照贴图+实时Bump/Spec映射效果。</li>
+</ul>
+</blockquote>
+</li>
+<li>LightProbes <blockquote>
+<p>Scene中放置采样点，收集周围明暗信息，对动态对象临近的采样点进行插值，结果作用于对象上</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="NavMesh-导航网格"><a href="#NavMesh-导航网格" class="headerlink" title="NavMesh 导航网格"></a>NavMesh 导航网格</h3><blockquote>
+<p>3d游戏World中 动态物体自动寻路的一种技术</p>
+<ul>
+<li>Navigation Static 参与导航网格烘培</li>
+<li>OffMeshLink Generation 关联分离的mesh</li>
+<li>NavigationLayer Default, NotWalkAble, Jump</li>
+<li>Bake  Radius</li>
+<li>Navmesh Obstacle组件 路障、<br>yield return 代替Timer 使用</li>
+</ul>
+</blockquote>
+<h3 id="遮挡剔除技术"><a href="#遮挡剔除技术" class="headerlink" title="遮挡剔除技术"></a>遮挡剔除技术</h3><blockquote>
+<p>Occlusion Culling 提高渲染性能</p>
+</blockquote>
+<h3 id="后期屏幕渲染特效"><a href="#后期屏幕渲染特效" class="headerlink" title="后期屏幕渲染特效"></a>后期屏幕渲染特效</h3><blockquote>
+<p>ImageEffects 应用在Camera上</p>
+<ul>
+<li>特效编写在OnRenderImage()函数</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="开发篇"><a href="#开发篇" class="headerlink" title="开发篇"></a>开发篇</h3><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><ol start="11">
+<li><p><strong>向量</strong></p>
+<blockquote>
+<p><strong>Basic Concepts</strong></p>
+<ul>
+<li>模 向量的长度</li>
+<li>标准化 保持方向不变 将向量长度变1</li>
+<li>单位向量 长度为1</li>
+<li>零向量 各分量均为0</li>
+</ul>
+</blockquote>
+<p><strong>运算</strong></p>
+<ul>
+<li>加减 合力、叠加</li>
+<li>数乘 缩放</li>
+<li>点乘 向量点相乘 标量值 向量长度相乘后 再乘以 夹角的余弦值，如果均为单位向量 a.b 等于向量b在a方向上的投影长度<blockquote>
+<p>u.v == 0 u,v垂直 u.v &gt;0 u,v小于90’， u.v &lt;0 u,v夹角大于90</p>
+</blockquote>
+</li>
+<li>叉乘 两个向量相乘得到新的向量，垂直于原来的两个向量</li>
+</ul>
+</li>
+<li><p><strong>矩阵</strong></p>
+<blockquote>
+<p><strong>BasicConcepts</strong></p>
+<ul>
+<li>m行n列 3d 中常用4x4矩阵<br><strong>运算</strong></li>
+<li>平移 </li>
+<li>旋转</li>
+<li>缩放<br><strong>Matrix4x4类</strong></li>
+<li></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>齐次坐标</strong></p>
+<ul>
+<li>(wx, xy, wz, 1) 坐标点 (wx, wy, wz, 0)表示向量 </li>
+</ul>
+</li>
+<li><p><strong>四元数</strong></p>
+<ul>
+<li>一个标量分量和一个3维向量<br>Q=[w, (x,y,z)]</li>
+<li>使用<strong>Quaternion</strong>类表示  </li>
+</ul>
+</li>
+<li><p><strong>坐标系</strong></p>
+<ul>
+<li>世界坐标系 游戏场景</li>
+<li>局部坐标系 模型Mesh的顶点就是</li>
+<li>相机坐标系 物体是否在相机前方，及物体间的遮挡顺序</li>
+<li>屏幕坐标系 描述屏幕上的位置<blockquote>
+<p>+Transform.TransformPoint() 局部坐标系-&gt;世界坐标系<br>+Transform.InverseTransformPoint()<br>+Transform.TransformDirection(Vector3.forward)计算世界坐标系下物体的前方向(物体的前方向为局部坐标系z轴的正方向)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>渲染管线</strong></p>
+<blockquote>
+<ul>
+<li>Rendering 3d物体场景 转化为二维图像<ul>
+<li>RenderingPipeline 显示芯片内用于处理图形信号而相互独立的并行处理单元，每个处理阶段都从上一阶段接受输入数据，然后进行处理<br>管线处理的数据是顶点、几何图元和片段</li>
+<li>FixedRenderingPipeline 固定管线 顶点处理和像素着色是固化的</li>
+<li>可编程Pipeline(shader)<br>+D3D9 渲染管线有9个阶段 局部坐标transform-&gt;世界坐标transform-&gt;观察坐标transform-&gt;背面消隐-&gt;光照计算-&gt;裁剪-&gt;投影-&gt;视口计算-&gt;光栅化</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="Unity-Script"><a href="#Unity-Script" class="headerlink" title="Unity Script"></a>Unity Script</h3><ol start="11">
+<li><p>C Sharp</p>
+<ul>
+<li>只支持内建数组 new int[5]</li>
+<li>foreach(int item in array)</li>
+<li>ArrayList List</li>
+<li>ref 关键字 引用参数， 声明和函数调用实参数钱也要添加ref.</li>
+<li>out 关键字 实现多个返回值， 声明和实参调用都得使用out .</li>
+<li>Start或Awake 不是用构造函数</li>
+<li>游戏对象脚本类名与文件名要相同</li>
+<li>协同函数Coroutines 返回类型是IEnumerator， 使用yield return 替代yield</li>
+<li>必然事件Update（called every frame）, Start(), awake(called when create), fixedUpdate(固定时间间隔, 物理状态), LateUpdate(相机、游戏场景)</li>
+</ul>
+</li>
+<li><p>MonoBehavior</p>
+<ul>
+<li>OnMouseEnter, OnMouseOver, OnMouseExit, OnMouseDown, OnMouseUp, 鼠标对于GUI控件、或碰撞体</li>
+<li>OnTriggerEnter, OnTriggerExit, OnTriggerStay, 碰撞体和触发器相关</li>
+<li>OnCollisionEnter, OnCollisionExit, OnCollisionStay, 碰撞体和刚体相关</li>
+<li>OnControllerColliderHit, 当控制器移动时与碰撞体</li>
+<li>OnBecameVisible, OnBecameInvisible, 相机</li>
+<li>OnEnable, OnDisable, 对象 </li>
+<li>OnDestroy 脚本销毁, OnGui 渲染GUi和处理GUI消息时调用</li>
+</ul>
+</li>
+<li><p>组件变量</p>
+<ul>
+<li>transform  对象位置、旋转、缩放</li>
+<li>rigidbody</li>
+<li>renderer</li>
+<li>light </li>
+<li>camera</li>
+<li>Collider</li>
+<li>Animation</li>
+<li>Audio<blockquote>
+<p> GetComponent, GetComponents, GetComponentInChildren, GetComponentsInChildren</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>Time类</p>
+<blockquote>
+<p>Time</p>
+<ul>
+<li>time  </li>
+<li>timeSinceLevelLoad</li>
+<li>deltaTime 上一帧的时间</li>
+<li>fixedTime fixedUpdate时间</li>
+<li>fixedDeltaTime</li>
+<li>maximumDeltaTime </li>
+<li>smoothDeltaTime</li>
+<li>timeScale</li>
+<li>frameCount 渲染帧的总数</li>
+<li>realtimeSinceStartup 游戏开始到现在经历的真实时间</li>
+<li>captureFramerate  固定帧率<br>Random</li>
+<li>seed 随机数生成器种子</li>
+<li>value </li>
+<li>insideUnitSephere<br>Mathf</li>
+<li>PI </li>
+<li>infinity</li>
+<li>NegativeInfinity</li>
+<li>Deg2Rad</li>
+<li>Rad2Deg</li>
+<li>Epsilon</li>
+</ul>
+</blockquote>
+</li>
+<li><p>Coroutine协同程序<br>多个协同程序，同时只有一个在运行，别的会挂起</p>
+<ul>
+<li>StartCoroutine</li>
+<li>StopCoroutine</li>
+<li>StopAllCoroutine</li>
+<li>WaitForSeconds</li>
+<li>WaitForFixedUpdate</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="I-O-和-控制"><a href="#I-O-和-控制" class="headerlink" title="I/O 和 控制"></a>I/O 和 控制</h3><ol start="11">
+<li><p>Input</p>
+<blockquote>
+<p>鼠标、键盘、摇杆/方向盘/手柄</p>
+<ul>
+<li>compensateSensors 屏幕方向补偿感应器</li>
+<li>gyro  陀螺仪</li>
+<li>mousePosition</li>
+<li>anyKey</li>
+<li>anyKeyDown 任意键按下第一帧返回true</li>
+<li>inputString 键盘输入字符串</li>
+<li>acceleration 3维空间中的线性加速度</li>
+<li>accelerationEvents 上一帧的加速度数据列表</li>
+<li>accelerationEventCount 上一帧的加速度参数数据长度</li>
+<li>touches 触摸状态列表</li>
+<li>touchCount 所有触摸状态列表长度</li>
+<li>deviceOrientation<br>.</li>
+<li>GetAxis 虚拟输入轴的值， -10 - 10的渐变值</li>
+<li>GetAxisRaw </li>
+<li>GetButton 虚拟按键是否被按下</li>
+<li>GetButtonDown 在按键按下的那一帧返回true</li>
+<li>GetButtonUp 在按键松开的那一帧返回true</li>
+<li>GetKey 指定的按键被按下时返回true</li>
+<li>GetKeyDown 指定的按键按下时返回true</li>
+<li>GetKeyUp 指定的见松开</li>
+<li>GetJoystickNames 所有摇杆名称数组</li>
+<li>GetMouseButton</li>
+<li>GetMouseButtonDown</li>
+<li>GetMouseButtonUp </li>
+<li>ResetInputAxes重置输入</li>
+</ul>
+</blockquote>
+</li>
+<li><p>GUI</p>
+<blockquote>
+<p>内置GUI</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="Shader-amp-ShaderLab"><a href="#Shader-amp-ShaderLab" class="headerlink" title="Shader \&amp; ShaderLab"></a>Shader \&amp; ShaderLab</h3><ol start="11">
+<li><p>Shader开发</p>
+<blockquote>
+<p>渲染管线中的特定处理阶段提供算法的一段代码<br>  实时渲染， 镜头景深、动态模糊、卡通渲染<br>  shader, shaderLab, 表面着色器(Surface Shader)</p>
+</blockquote>
+<pre><code>Shader &apos;MyShader&apos;{
+ Properties{
+   _MyTexture (&quot;My Texture&quot;, 2) = &quot;white&quot; {}
+ }
+ SubShader{
+  //surface shader, vertex &amp; fragment shader, fixed function shaders
+ }
+ SubShader{
+   //备选shader
+  }
+}
+</code></pre><ul>
+<li>一个着色器包含1个或多个字着色器，会遍历寻找第一个被用户设备支持的子着色器进行渲染</li>
+<li>Properties的属性定义<br>(“显式名称”, Vector)=默认向量值 4维向量<br>(“定义名称”, Color)=颜色值<br>(“……”, Float)=浮点数<br>(“……”, Range(min, max))=默认浮点数<br>(“……”, 2D) 贴图{选项}<br>(“……”, Rect)      矩形纹理属性(非2的n次幂)<br>(“……”, Cube)      立方体纹理属性<blockquote>
+<p>选项</p>
+<ul>
+<li>TexGen 纹理生成模式  ObjectLinear, EyeLinear, SphereMap, CubeReflect, CubeNormal<br>与OpenGL的纹理生成模式相对应，如果使用自定义的顶点程序，该参数将被忽略。</li>
+<li>LightmapMode 纹理将接受渲染器的光照贴图，不从Material材质</li>
+<li>Pass 每个Pass都会渲染一次对象 根据光照交互情况渲染多次 </li>
+</ul>
+</blockquote>
+</li>
+<li>Pass 语法<br>Pass {[name and tags] [RenderSetup 渲染][TextureSetup纹理]}<br>RenderingSetup  Material 材质 Lighting光照 Cull裁剪 ZTest深度测试 ZWrite深度缓存写入 Fog AlphaTest BlendAlpha Color ColorMask Offset SeparateSpecular ColorMaterial<br>TextureSetup    用于固定管线(使用了SurfaceShader Vertex&amp;FragmentShader将忽略)使用SetTexture{[命令选项]}， 包含命令combine[previous, constant, primary, texture], constantColor, matrix, Unity支持UsePass</li>
+<li>Category分类<br>类似于子着色器继承<br>Shader “example”{<br>  Category{<pre><code>Fog {Mode Off}
+Blend One One
+</code></pre>  }<br>}</li>
+</ul>
+</li>
+<li><p>FixedFunction Shaders</p>
+</li>
+<li><p>Surface Shaders</p>
+<blockquote>
+<p>嵌在ShaderLab的结构代码</p>
+</blockquote>
+</li>
+<li><p>Vertex &amp; Fragment Shaders<br>使用vertex时，FixedFunction会关闭,vertex关闭固定管线中的3d transform、光照、纹理坐标生成，fragment会替换掉SetTexture的纹理混合模式</p>
+</li>
+</ol>
+<hr>
+<h3 id="Advanced-Develop"><a href="#Advanced-Develop" class="headerlink" title="Advanced Develop"></a>Advanced Develop</h3><ol start="11">
+<li><p>Batching<br>渲染过程：camera可视范围-&gt;任务模型(法线、本地位置、UV), 索引(各顶点形成的3角形)，变换(位置、缩放、旋转、摄像机位置)、</p>
+</li>
+<li><p>编辑器扩展<br>Editor Class for extend dev。<br>+继承EditorWindow @MenuItem<br>+自定义Inspector<br>+自定义Scene onSceneGUI()</p>
+</li>
+</ol>
+<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ol start="11">
+<li>AssetBundle 是Unity包含一切的格式<blockquote>
+<p>自定义二进制文件ext 改为.bytes<br>AssetBundle API </p>
+<ul>
+<li>BuildPipeline.BuildAssetBundle 任意文件类型的Asset打包成AssetBundle</li>
+<li>BuildPipeline。BuildStreamedSceneAssetBundle 一个或N个Scene以流的方式打包成AssetBundle文件</li>
+<li>BuildPipeline.BuildAssetBundleExplicictAssetNames 与build相同，但可以额外的指定名字</li>
+<li>使用PushAssetDependencies() 和 PopAssetDependencies()来设置asset之间的依赖关系</li>
+</ul>
+</blockquote>
+</li>
+<li><p>使用网络下载AssetBundle</p>
+<ul>
+<li>使用WWW直接下载</li>
+<li>使用WWW.LoadfromCacheorDownload</li>
+</ul>
+</li>
+<li><p>加载Asset</p>
+<ul>
+<li>AssetBundle.Load() AssetBundle.LoadAsync(name)</li>
+<li>Application.LoadLevel(name) Application.LoadLevelAsync(name)</li>
+<li>Application.LoadLevelAdditive Application.LoadLevelAdditiveAsync(name)</li>
+</ul>
+</li>
+<li><p>卸载AssetBundle</p>
+<ul>
+<li>Assetbundle.Unload(bool) true | false 导致AssetBundle相关的Asset是否被卸载</li>
+</ul>
+</li>
+<li><p>卸载没有使用的Assets</p>
+<ul>
+<li>Resources.UnloadUnunsedAssets() 卸载没用的assets</li>
+</ul>
+</li>
+<li><p>Instantiate 的GameObject使用 Destroy() DestroyImmediate() </p>
+</li>
+</ol>
+<h3 id="Script-Debug"><a href="#Script-Debug" class="headerlink" title="Script Debug"></a>Script Debug</h3><ol start="11">
+<li>Profiler 优化与调试<ul>
+<li>FixedUpdate中不要包含无需重复调用的代码</li>
+<li>Update 中最好不要执行find findObjectOfType findGameObjectWithTag, find操作最好在awake或 start中执行</li>
+</ul>
+</li>
+</ol>
+<h3 id="Demo-详解"><a href="#Demo-详解" class="headerlink" title="Demo 详解"></a>Demo 详解</h3><ol start="11">
+<li>Angry Bots<blockquote>
+<ul>
+<li>FBX(静态资源、动态资源)的导入 Model Label 可以设置FBX文件的Mesh, Material, UV, Normal 切线 Rig 设置Animation Type<ul>
+<li>人物身上挂载了多个脚本</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="第二次阅读"><a href="#第二次阅读" class="headerlink" title="第二次阅读"></a>第二次阅读</h3><ol start="11">
+<li><p>概述&amp;Concept</p>
+<ul>
+<li>LOD Levels of Details  多层次细节</li>
+<li>实时光影  </li>
+<li>Lightmap 工具Beast(Color Bounce, Soft Shadows, High Dynamic Range Lighting, Lingthing of Moving Objects)</li>
+<li>Mecanim 新的动画系统</li>
+</ul>
+</li>
+<li><p>3D模型、材质与动画</p>
+<ul>
+<li>3d的内容 Mesh, Textures, Animations, Bones骨骼</li>
+</ul>
+</li>
+<li><p>Components  Mesh </p>
+<ul>
+<li>Mesh Filter 获取Mesh</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/21/recall-of-old-blog/" rel="next" title="gae博客的点点">
+                <i class="fa fa-chevron-left"></i> gae博客的点点
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/23/BTFinal/" rel="prev" title="Unreal 的行为树">
+                Unreal 的行为树 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://a.disquscdn.com/uploads/users/4767/3196/avatar92.jpg" alt="liooge">
+          <p class="site-author-name" itemprop="name">liooge</p>
+          <p class="site-description motion-element" itemprop="description">life & exploring,  the Sea of Stars</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Tips"><span class="nav-number">1.</span> <span class="nav-text">Basic Tips</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏场景"><span class="nav-number">2.</span> <span class="nav-text">游戏场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件介绍"><span class="nav-number">3.</span> <span class="nav-text">组件介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作"><span class="nav-number">4.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Script脚本"><span class="nav-number">5.</span> <span class="nav-text">Script脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建光源"><span class="nav-number">6.</span> <span class="nav-text">创建光源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shuriken粒子系统"><span class="nav-number">7.</span> <span class="nav-text">Shuriken粒子系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mecanim-动画系统"><span class="nav-number">8.</span> <span class="nav-text">Mecanim 动画系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理引擎"><span class="nav-number">9.</span> <span class="nav-text">物理引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo"><span class="nav-number">10.</span> <span class="nav-text">Demo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#光照贴图技术"><span class="nav-number">11.</span> <span class="nav-text">光照贴图技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NavMesh-导航网格"><span class="nav-number">12.</span> <span class="nav-text">NavMesh 导航网格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遮挡剔除技术"><span class="nav-number">13.</span> <span class="nav-text">遮挡剔除技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后期屏幕渲染特效"><span class="nav-number">14.</span> <span class="nav-text">后期屏幕渲染特效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发篇"><span class="nav-number">15.</span> <span class="nav-text">开发篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础知识"><span class="nav-number">16.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unity-Script"><span class="nav-number">17.</span> <span class="nav-text">Unity Script</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-O-和-控制"><span class="nav-number">18.</span> <span class="nav-text">I/O 和 控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shader-amp-ShaderLab"><span class="nav-number">19.</span> <span class="nav-text">Shader \&amp; ShaderLab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advanced-Develop"><span class="nav-number">20.</span> <span class="nav-text">Advanced Develop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作流程"><span class="nav-number">21.</span> <span class="nav-text">工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Script-Debug"><span class="nav-number">22.</span> <span class="nav-text">Script Debug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo-详解"><span class="nav-number">23.</span> <span class="nav-text">Demo 详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二次阅读"><span class="nav-number">24.</span> <span class="nav-text">第二次阅读</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liooge</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'emps';
+      var disqus_identifier = '2015/10/21/unity3d-notes-markdown-format/';
+      var disqus_title = '之前学习unity3d做的笔记，用的markdown语法，测试一下试试';
+      var disqus_url = 'http://www.emps.win/2015/10/21/unity3d-notes-markdown-format/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
